@@ -291,7 +291,6 @@
     <Content Include="Views\ProductManagement\Index.cshtml" />
     <Content Include="Views\ProductManagement\Create.cshtml" />
     <Content Include="Views\ProductManagement\Edit.cshtml" />
-    <Content Include="Views\ProductManagement\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

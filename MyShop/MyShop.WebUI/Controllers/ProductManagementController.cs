@@ -47,9 +47,9 @@ namespace MyShop.WebUI.Controllers
             }
         }
 
-        public ActionResult Edit(string Id)
+        public ActionResult Edit(string ProudctId)
         {
-            Product product = context.Find(Id);
+            Product product = context.Find(ProudctId);
 
             if (product == null)
             {
@@ -63,9 +63,9 @@ namespace MyShop.WebUI.Controllers
 
         [HttpPost]
    
-        public ActionResult Edit(Product product, string Id)
+        public ActionResult Edit(Product product, string ProudctId)
         {
-            Product productToEdit = context.Find(Id);
+            Product productToEdit = context.Find(ProudctId);
 
             if (productToEdit == null)
             {
@@ -90,9 +90,9 @@ namespace MyShop.WebUI.Controllers
             }
         }
 
-        public ActionResult Delete(string Id)
+        public ActionResult Delete(string ProudctId)
         {
-            Product productToDelete = context.Find(Id);
+            Product productToDelete = context.Find(ProudctId);
 
             if (productToDelete == null)
             {
@@ -106,9 +106,9 @@ namespace MyShop.WebUI.Controllers
 
         [HttpPost]
         [ActionName("Delete")]
-        public ActionResult ConfirmDelete(string Id)
+        public ActionResult ConfirmDelete(string ProudctId)
         {
-            Product productToDelete = context.Find(Id);
+            Product productToDelete = context.Find(ProudctId);
 
             if (productToDelete == null)
             {
@@ -116,7 +116,7 @@ namespace MyShop.WebUI.Controllers
             }
             else
             {
-                context.Delete(Id);
+                context.Delete(ProudctId);
                 context.Commit();
                 return View(productToDelete);
 
